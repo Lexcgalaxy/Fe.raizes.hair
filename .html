@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fé Raízes Hair | Salão de Beleza de Alto Padrão & Especialista em Cabelos</title>
+    <meta name="description" content="Transforme sua beleza com quem entende de cabelos. Especialistas em coloração, mechas, reconstrução capilar e corte feminino com atendimento exclusivo.">
+    <meta name="keywords" content="salão de beleza, cabelos, mechas, coloração, hidratação, reconstrução capilar, corte feminino, Fé Raízes Hair, cabeleireiro brasil">
+    <meta name="author" content="Fé Raízes Hair">
+    <link rel="canonical" href="https://www.feraizeshair.com.br">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fé Raízes Hair | Transforme sua beleza com especialistas">
+    <meta property="og:description" content="Realce sua autoestima com tratamentos personalizados, técnicas modernas e atendimento acolhedor.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Google Fonts: Playfair Display (Luxo/Serifa) & Plus Jakarta Sans (Modernidade/Limpeza) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* ==========================================================================
+           1. VARIÁVEIS DO SISTEMA DE DESIGN & RESET
+           ========================================================================== */
+        :root {
+            --bg-page: #FAF8F5;          /* Creme muito suave */
+            --bg-card: #FFFFFF;          /* Branco puro */
+            --bg-dark: #161413;          /* Obsidian profundo */
+            --bg-accent-light: #F3EDE4;  /* Bege quente neutro */
+            
+            --text-main: #262322;        /* Carvão escuríssimo */
+            --text-muted: #6B6560;       /* Cinza aquecido */
+            --text-light: #FAF8F5;       /* Creme para fundos escuras */
+            
+            --color-gold: #C8A97E;       /* Dourado champanhe fosco */
+            --color-gold-hover: #B5956A; /* Dourado mais intenso para hover */
+            --color-gold-dark: #8F6F46;  /* Dourado escuro para contraste */
+            
+            --border-radius-lg: 28px;
+            --border-radius-md: 18px;
+            --border-radius-sm: 12px;
+            
+            --shadow-subtle: 0 10px 40px -10px rgba(22, 20, 19, 0.05);
+            --shadow-hover: 0 20px 50px -12px rgba(200, 169, 126, 0.25);
+            --shadow-gold: 0 8px 24px -4px rgba(200, 169, 126, 0.4);
+            
+            --transition-smooth: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-padding {
+            padding: 7.5rem 0;
+        }
+
+        /* ==========================================================================
+           2. COMPONENTES COMUNS & TIPOGRAFIA
+           ========================================================================== */
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 4.5rem auto;
+        }
+
+        .tag-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--bg-accent-light);
+            color: var(--color-gold-dark);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.825rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(200, 169, 126, 0.3);
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            color: var(--text-main);
+            margin-bottom: 1.2rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        /* Botões Prêmios */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.1rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--color-gold) 0%, #B5956A 100%);
+            color: #FFFFFF;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #D4AF37 0%, var(--color-gold-dark) 100%);
+            box-shadow: 0 14px 30px -6px rgba(200, 169, 126, 0.6);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-light);
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #FFFFFF;
+            transform: translateY(-3px);
+        }
+
+        /* Animações de Revelação (Scroll) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==========================================================================
+           3. NAVEGAÇÃO SUPERIOR (NAVBAR)
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background: rgba(250, 248, 245, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+            border-bottom: 1px solid rgba(200, 169, 126, 0.15);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .brand-logo .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-light);
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled .brand-logo .logo-main {
+            color: var(--text-main);
+        }
+
+        .brand-logo .logo-sub {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-top: -3px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .navbar.scrolled .nav-links a {
+            color: var(--text-main);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-cta {
+                display: block;
+                padding: 0.75rem 1.6rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .navbar.scrolled .menu-toggle {
+            color: var(--text-main);
+        }
+
+        @media (max-width: 991px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background: var(--bg-dark);
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+                transition: 0.5s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                padding: 3rem;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .nav-links a {
+                color: var(--text-light) !important;
+                font-size: 1.25rem;
+            }
+            .menu-toggle {
+                display: block;
+                z-index: 1001;
+            }
+        }
+
+        /* ==========================================================================
+           4. HERO SECTION
+           ========================================================================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;
+            overflow: hidden;
+            padding: 8rem 0 5rem 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(22, 20, 19, 0.88) 0%, rgba(22, 20, 19, 0.65) 60%, rgba(200, 169, 126, 0.25) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+            color: var(--text-light);
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(200, 169, 126, 0.5);
+            padding: 0.5rem 1.4rem;
+            border-radius: 50px;
+            color: var(--color-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            line-height: 1.15;
+        }
+
+        .hero h1 span {
+            color: var(--color-gold);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2.8rem;
+            font-weight: 300;
+            max-width: 640px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+        }
+
+        /* Badge Flutuante no Hero */
+        .hero-badge {
+            position: absolute;
+            bottom: 4rem;
+            right: 4rem;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-md);
+            display: none;
+            align-items: center;
+            gap: 1.2rem;
+            max-width: 320px;
+        }
+
+        @media (min-width: 1200px) {
+            .hero-badge {
+                display: flex;
+            }
+        }
+
+        .hero-badge-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            flex-shrink: 0;
+        }
+
+        .hero-badge-text h4 {
+            font-size: 1.1rem;
+            color: #FFF;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero-badge-text p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* ==========================================================================
+           5. ABOUT US (SOBRE NÓS)
+           ========================================================================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 6rem;
+            }
+        }
+
+        .about-images {
+            position: relative;
+            padding: 2rem 2rem 2rem 0;
+        }
+
+        .about-img-main {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .about-img-main img {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+
+        .about-img-main:hover img {
+            transform: scale(1.04);
+        }
+
+        .about-img-accent {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 55%;
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            border: 8px solid var(--bg-page);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .about-img-accent img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-size: clamp(2.2rem, 3.8vw, 3rem);
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-quote {
+            border-left: 3px solid var(--color-gold);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-main);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .about-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .about-feature-item i {
+            color: var(--color-gold);
+        }
+
+        /* ==========================================================================
+           6. SERVICES SECTION (SERVIÇOS)
+           ========================================================================== */
+        .services-section {
+            background-color: var(--bg-accent-light);
+            border-radius: 40px 40px 0 0;
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            padding: 3rem 2.2rem;
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(200, 169, 126, 0.18);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::top {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-gold) 0%, transparent 100%);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--color-gold);
+        }
+
+        .service-card:hover::top {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--bg-accent-light);
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold-dark);
+            margin-bottom: 2rem;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--color-gold);
+            color: #FFFFFF;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--color-gold-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .service-card:hover .service-link {
+            color: var(--text-main);
+            gap: 0.8rem;
+        }
+
+        /* ==========================================================================
+           7. WHY CHOOSE US (POR QUE ESCOLHER O FÉ RAÍZES)
+           ========================================================================== */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .why-emoji {
+            font-size: 2rem;
+            background: var(--bg-accent-light);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius-md);
+            flex-shrink: 0;
+        }
+
+        .why-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .why-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* ==========================================================================
+           8. GALLERY (GALERIA VIP)
+           ========================================================================== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 320px);
+            }
+            .gallery-item:nth-child(1) {
+                grid-column: span 2;
+            }
+            .gallery-item:nth-child(4) {
+                grid-column: span 2;
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            height: 320px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(22, 20, 19, 0.8) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            color: #FFF;
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .gallery-overlay span {
+            color: var(--color-gold);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* ==========================================================================
+           9. TESTIMONIALS (DEPOIMENTOS)
+           ========================================================================== */
+        .testimonials-section {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            border-radius: 40px;
+            margin: 4rem 1.5rem;
+            padding: 7rem 0;
+        }
+
+        .testimonials-section .section-header h2 {
+            color: #FFFFFF;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(200, 169, 126, 0.2);
+            padding: 3rem 2.5rem;
+            border-radius: var(--border-radius-lg);
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--color-gold);
+            transform: translateY(-5px);
+        }
+
+        .stars {
+            color: var(--color-gold);
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--color-gold-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #FFF;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+        }
+
+        .author-info h5 {
+            font-size: 1.05rem;
+            color: #FFF;
+            margin: 0;
+        }
+
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--color-gold);
+        }
+
+        /* ==========================================================================
+           10. CONTACT SECTION (CONTATO & LOCALIZAÇÃO)
+           ========================================================================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        @media (min-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+            }
+        }
+
+        .contact-info-box {
+            background: var(--bg-card);
+            padding: 3.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid rgba(200, 169, 126, 0.2);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: var(--bg-accent-light);
+            color: var(--color-gold-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-details p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 480px;
+            background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            border-radius: var(--border-radius-lg);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-hover);
+            border: 4px solid #FFFFFF;
+        }
+
+        .map-overlay {
+            background: rgba(22, 20, 19, 0.82);
+            backdrop-filter: blur(8px);
+            padding: 2.5rem;
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            color: #FFF;
+            max-width: 320px;
+            border: 1px solid rgba(200, 169, 126, 0.4);
+        }
+
+        .map-overlay h4 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--color-gold);
+        }
+
+        /* ==========================================================================
+           11. FOOTER (RODAPÉ VIP)
+           ========================================================================== */
+        footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 6rem 0 3rem 0;
+            border-top: 1px solid rgba(200, 169, 126, 0.2);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 4rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.65);
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 1.8rem;
+            color: #FFFFFF;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--color-gold);
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-gold);
+            padding-left: 6px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition-smooth);
+        }
+
+        .social-btn:hover {
+            background: var(--color-gold);
+            border-color: var(--color-gold);
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.88rem;
+        }
+
+        /* ==========================================================================
+           12. BOTÃO FLUTUANTE DE WHATSAPP
+           ========================================================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: #25D366;
+            color: #FFFFFF;
+            padding: 0.9rem 1.6rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px -5px rgba(37, 211, 102, 0.6);
+            transition: var(--transition-smooth);
+            animation: pulse-green 2.5s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.06) translateY(-4px);
+            background: #20BD5A;
+            color: #FFF;
+        }
+
+        .whatsapp-float i {
+            width: 24px;
+            height: 24px;
+        }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @media (max-width: 600px) {
+            .whatsapp-float span {
+                display: none;
+            }
+            .whatsapp-float {
+                padding: 1rem;
+                border-radius: 50%;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       CABEÇALHO / NAVEGAÇÃO
+       ========================================================================== -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-main">Fé Raízes</span>
+                <span class="logo-sub">Hair Studio</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="#galeria" class="nav-link">Galeria</a>
+                <a href="#depoimentos" class="nav-link">Avaliações</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20no%20Fé%20Raízes%20Hair." target="_blank" class="btn btn-gold nav-cta">
+                <i data-lucide="calendar"></i>
+                Agendar Horário
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                <i data-lucide="menu" size="28"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content reveal">
+                <div class="hero-pill">
+                    <i data-lucide="sparkles" size="16"></i>
+                    Atendimento de Alta Precisão
+                </div>
+                <h1>Transforme sua beleza com quem entende de <span>cabelos.</span></h1>
+                <p>Realce sua autoestima com tratamentos personalizados, técnicas modernas de coloração e um atendimento exclusivo e acolhedor.</p>
+                
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20no%20Fé%20Raízes%20Hair." target="_blank" class="btn btn-gold">
+                        <i data-lucide="message-circle"></i>
+                        Agendar pelo WhatsApp
+                    </a>
+                    <a href="#servicos" class="btn btn-outline">
+                        Conhecer Serviços
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card/Social Proof Flutuante -->
+            <div class="hero-badge reveal">
+                <div class="hero-badge-icon">
+                    <i data-lucide="award"></i>
+                </div>
+                <div class="hero-badge-text">
+                    <h4>Especialistas em Mechas</h4>
+                    <p>Saúde capilar em 1º lugar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       ABOUT US (SOBRE O SALÃO)
+       ========================================================================== -->
+    <section class="section-padding" id="sobre">
+        <div class="container about-grid">
+            <div class="about-images reveal">
+                <div class="about-img-main">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Mulher com cabelo loiro maravilhoso e saudável no Fé Raízes Hair">
+                </div>
+                <div class="about-img-accent">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80" alt="Detalhe do ambiente luxuoso e moderno do salão">
+                </div>
+            </div>
+
+            <div class="about-content reveal">
+                <div class="tag-pill">Filosofia Fé Raízes</div>
+                <h2>Sua beleza começa aqui</h2>
+                <p>No <strong>Fé Raízes Hair</strong>, acreditamos que cada cabelo carrega uma identidade única e sagrada. Nosso propósito vai muito além da estética: unimos ciência capilar avançada, arte em coloração e um acolhimento pensado para que você se sinta completamente segura e confiante.</p>
+                
+                <div class="about-quote">
+                    "Não transformamos apenas fios de cabelo, nós revelamos a melhor e mais autêntica versão de cada mulher."
+                </div>
+
+                <p>Valorizamos a saúde capilar acima de tudo. Por isso, trabalhamos apenas com as marcas mais renomadas do mercado internacional e realizamos diagnósticos precisos para garantir resultados deslumbrantes sem comprometer a integridade do seu cabelo.</p>
+
+                <div class="about-features">
+                    <div class="about-feature-item">
+                        <i data-lucide="check-circle"></i> Diagnóstico Capilar
+                    </div>
+                    <div class="about-feature-item">
+                        <i data-lucide="check-circle"></i> Protocolos Exclusivos
+                    </div>
+                    <div class="about-feature-item">
+                        <i data-lucide="check-circle"></i> Mechas sem Danos
+                    </div>
+                    <div class="about-feature-item">
+                        <i data-lucide="check-circle"></i> Conforto & Privacidade
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SERVIÇOS
+       ========================================================================== -->
+    <section class="section-padding services-section" id="servicos">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="tag-pill">Menu de Tratamentos</div>
+                <h2>Nossos Serviços de Excelência</h2>
+                <p>Combinamos técnicas revolucionárias e produtos de alto luxo para entregar o resultado perfeito para as necessidades específicas do seu fio.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Serviço 1 -->
+                <div class="service-card reveal">
+                    <div>
+                        <div class="service-icon">
+                            <i data-lucide="scissors" size="30"></i>
+                        </div>
+                        <h3>Corte Feminino</h3>
+                        <p>Visagismo personalizado para valorizar os traços do seu rosto, trazendo leveza, movimento, sofisticação e praticidade para o seu dia a dia.</p>
+                    </div>
+                    <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20um%20Corte%20Feminino." target="_blank" class="service-link">
+                        Agendar agora <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="service-card reveal">
+                    <div>
+                        <div class="service-icon">
+                            <i data-lucide="wind" size="30"></i>
+                        </div>
+                        <h3>Escova e Finalização</h3>
+                        <p>Modelagem duradoura, brilho espelhado e acabamento impecável. Perfeito para eventos especiais ou para se sentir maravilhosa no dia a dia.</p>
+                    </div>
+                    <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20uma%20Escova%20e%20Finalização." target="_blank" class="service-link">
+                        Agendar agora <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="service-card reveal">
+                    <div>
+                        <div class="service-icon">
+                            <i data-lucide="palette" size="30"></i>
+                        </div>
+                        <h3>Coloração</h3>
+                        <p>Cores ricas, profundas e vibrantes com cobertura total e uniforme. Fórmulas suaves que tratam o fio enquanto revelam uma cor deslumbrante.</p>
+                    </div>
+                    <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20uma%20Coloração." target="_blank" class="service-link">
+                        Agendar agora <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="service-card reveal">
+                    <div>
+                        <div class="service-icon">
+                            <i data-lucide="sparkles" size="30"></i>
+                        </div>
+                        <h3>Mechas Iluminadas</h3>
+                        <p>Técnicas exclusivas de descoloração como Balayage, Babylights e Contour para criar pontos de luz naturais que realçam seu tom de pele com elegância.</p>
+                    </div>
+                    <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20para%20Mechas." target="_blank" class="service-link">
+                        Agendar agora <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="service-card reveal">
+                    <div>
+                        <div class="service-icon">
+                            <i data-lucide="droplet" size="30"></i>
+                        </div>
+                        <h3>Hidratação Profunda</h3>
+                        <p>Reposição de água e nutrientes essenciais utilizando nanotecnologia. Devolve a maciez imediata, elimina o frizz e revitaliza o brilho dos fios secos.</p>
+                    </div>
+                    <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20uma%20Hidratação%20Profunda." target="_blank" class="service-link">
+                        Agendar agora <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 6 -->
+                <div class="service-card reveal">
+                    <div>
+                        <div class="service-icon">
+                            <i data-lucide="shield-check" size="30"></i>
+                        </div>
+                        <h3>Reconstrução Capilar</h3>
+                        <p>Tratamento de choque para cabelos extremamente danificados, quimicamente tratados ou elásticos. Repõe a massa proteica e sela a cutícula da fibra.</p>
+                    </div>
+                    <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20uma%20Reconstrução%20Capilar." target="_blank" class="service-link">
+                        Agendar agora <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 7 -->
+                <div class="service-card reveal" style="grid-column: 1 / -1; max-width: 680px; margin: 0 auto;">
+                    <div>
+                        <div class="service-icon">
+                            <i data-lucide="heart-handshake" size="30"></i>
+                        </div>
+                        <h3>Tratamentos Especiais & Cronograma</h3>
+                        <p>Desenvolvemos protocolos customizados para o seu tipo de couro cabeludo (terapia capilar para queda, oleosidade e descamação) além de cronogramas para o pré e pós mechas.</p>
+                    </div>
+                    <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20uma%20avaliação%20para%20Tratamentos%20Especiais." target="_blank" class="service-link">
+                        Fazer Diagnóstico Capilar <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       DIFERENCIAIS (POR QUE ESCOLHER O FÉ RAÍZES)
+       ========================================================================== -->
+    <section class="section-padding" id="diferenciais">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="tag-pill">Diferenciais Exclusivos</div>
+                <h2>Por que escolher o Fé Raízes Hair?</h2>
+                <p>Criamos um novo padrão de atendimento para mulheres exigentes que buscam excelência técnica aliada a uma experiência sensorial inesquecível.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-emoji">✨</div>
+                    <div>
+                        <h4>Atendimento Personalizado</h4>
+                        <p>Cada cliente é única. Entendemos sua rotina, estilo de vida e expectativas antes de sugerir qualquer transformação.</p>
+                    </div>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-emoji">💛</div>
+                    <div>
+                        <h4>Produtos de Alta Qualidade</h4>
+                        <p>Utilizamos estritamente linhas premium mundiais como Kérastase, L'Oréal Professionnel, Wella e Truss.</p>
+                    </div>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-emoji">⭐</div>
+                    <div>
+                        <h4>Profissionais Especializados</h4>
+                        <p>Nossa equipe passa por treinamentos constantes nas mais modernas academias de cabelo do país e do exterior.</p>
+                    </div>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-emoji">💇</div>
+                    <div>
+                        <h4>Técnicas Atualizadas</h4>
+                        <p>Dominamos as últimas tendências globais de mechas de baixo dano, visagismo em cortes e tratamentos biotecnológicos.</p>
+                    </div>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-emoji">🤍</div>
+                    <div>
+                        <h4>Ambiente Confortável</h4>
+                        <p>Um salão planejado com design sofisticado, café gourmet, música relaxante e total climatização para seu bem-estar.</p>
+                    </div>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="why-emoji">📍</div>
+                    <div>
+                        <h4>Fácil Agendamento</h4>
+                        <p>Sem esperas ao telefone. Converse diretamente conosco via WhatsApp de forma rápida, simples e humanizada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       GALERIA VIP
+       ========================================================================== -->
+    <section class="section-padding" id="galeria" style="background-color: var(--bg-card);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="tag-pill">Resultados Reais</div>
+                <h2>Nosso Estúdio & Transformações</h2>
+                <p>Um vislumbre da excelência que entregamos todos os dias em nossas cadeiras.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=80" alt="Mechas loiro pérola deslumbrante">
+                    <div class="gallery-overlay">
+                        <span>Mechas & Iluminação</span>
+                        <h4>Loiro Pérola Saudável</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="Corte e finalização impecável">
+                    <div class="gallery-overlay">
+                        <span>Corte Visagista</span>
+                        <h4>Leveza & Movimento</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80" alt="Cabelo castanho iluminado com brilho intenso">
+                    <div class="gallery-overlay">
+                        <span>Morena Iluminada</span>
+                        <h4>Contour Avelã</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1000&q=80" alt="Ambiente do Salão Fé Raízes Hair">
+                    <div class="gallery-overlay">
+                        <span>Nosso Espaço</span>
+                        <h4>Conforto & Sofisticação</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       DEPOIMENTOS (AVALIAÇÕES CLIENTES VIP)
+       ========================================================================== -->
+    <section class="testimonials-section" id="depoimentos">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="tag-pill" style="background: rgba(200, 169, 126, 0.15); color: var(--color-gold);">O Que Dizem Nossas Clientes</div>
+                <h2>Amor em Forma de Depoimento</h2>
+                <p style="color: rgba(255, 255, 255, 0.7);">A satisfação e o sorriso no rosto de cada mulher ao olhar no espelho é o nosso maior orgulho.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Meu cabelo nunca esteve tão bonito e saudável na vida! Fiz mechas com receio de estragar os fios, mas o cuidado deles antes, durante e depois foi impecável. Atendimento perfeito!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h5>Juliana S.</h5>
+                            <span>Cliente há 2 anos • Mechas e Tratamento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Profissionais super competentes e atenciosos. Conseguiram acertar exatamente o corte visagista e a cor de morena iluminada que eu sonhava há anos. Resultado de alto padrão!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h5>Amanda R.</h5>
+                            <span>Cliente há 1 ano • Morena Iluminada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Já virei cliente fiel do Fé Raízes. O ambiente é lindo, extremamente cheiroso, acolhedor e te faz esquecer os problemas do dia. Recomendo de olhos fechados para todas as minhas amigas!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">F</div>
+                        <div class="author-info">
+                            <h5>Fernanda M.</h5>
+                            <span>Cliente há 3 anos • Cronograma Capilar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       CONTATO E LOCALIZAÇÃO
+       ========================================================================== -->
+    <section class="section-padding" id="contato">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="tag-pill">Conecte-se Conosco</div>
+                <h2>Agende Sua Experiência</h2>
+                <p>Estamos prontos para recebê-la com um delicioso café quente e os melhores tratamentos para o seu cabelo.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Informações -->
+                <div class="contact-info-box reveal">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 2.5rem; color: var(--text-main);">Informações do Salão</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Endereço VIP</h4>
+           
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Terça a Sexta: 09h00 às 20h00<br>Sábados: 08h30 às 18h30</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone-call"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Atendimento WhatsApp</h4>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" style="margin-top: 3rem;">
+                        <a href="https://wa.me/5521967822286?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20no%20Fé%20Raízes%20Hair." target="_blank" class="btn btn-gold" style="width: 100%;">
+                            <i data-lucide="calendar-check"></i>
+                            Agendar Meu Horário Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Placeholder de Google Maps Elegante -->
+                <div class="map-placeholder reveal">
+                    <div class="map-overlay">
+                        <i data-lucide="map-pinned" size="40" style="color: var(--color-gold); margin-bottom: 1rem;"></i>
+                        <h4>Localização Privilegiada</h4>
+                             <a href="https://maps.google.com" target="_blank" class="btn btn-outline" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">
+                            Ver no Google Maps <i data-lucide="external-link" size="14"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       RODAPÉ (FOOTER)
+       ========================================================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="brand-logo">
+                        <span class="logo-main" style="color: #FFF;">Fé Raízes</span>
+                        <span class="logo-sub">Hair Studio</span>
+                    </a>
+                    <p>O salão de beleza referência em saúde capilar, coloração de alta performance e acolhimento feminino exclusivo. Transformando histórias através de cabelos extraordinários.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-btn">
+                            <i data-lucide="instagram" size="20"></i>
+                        </a>
+                        <a href="https://wa.me/5521967822286" target="_blank" aria-label="WhatsApp" class="social-btn">
+                            <i data-lucide="message-circle" size="20"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-btn">
+                            <i data-lucide="facebook" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Menu Rápido</h4>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Nossa Filosofia</a></li>
+                        <li><a href="#servicos">Tratamentos & Mechas</a></li>
+                        <li><a href="#diferenciais">Diferenciais VIP</a></li>
+                        <li><a href="#galeria">Transformações</a></li>
+                        <li><a href="#depoimentos">Avaliações</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Especialidades</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicos">Corte Visagista Feminino</a></li>
+                        <li><a href="#servicos">Mechas Balayage & Contour</a></li>
+                        <li><a href="#servicos">Coloração Premium sem Danos</a></li>
+                        <li><a href="#servicos">Reconstrução Capilar Intensiva</a></li>
+                        <li><a href="#servicos">Cronograma Capilar Personalizado</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Atendimento VIP</h4>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-bottom: 1rem;">
+                        Agendamentos e dúvidas diretamente via WhatsApp para maior comodidade.
+                    </p>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20com%20o%20Fé%20Raízes." target="_blank" style="color: var(--color-gold); font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                        Chamar no WhatsApp <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; <span id="year"></span> Fé Raízes Hair. Todos os direitos reservados.
+                </div>
+                <div>
+                    Desenvolvido com sofisticação para realçar a sua beleza.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       BOTÃO FLUTUANTE DE WHATSAPP
+       ========================================================================== -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Estou%20no%20site%20do%20Fé%20Raízes%20Hair%20e%20gostaria%20de%20agendar%20um%20horário." target="_blank" class="whatsapp-float" aria-label="Agendar pelo WhatsApp">
+        <i data-lucide="message-circle" size="24"></i>
+        <span>Agendar Horário</span>
+    </a>
+
+    <!-- ==========================================================================
+       JAVASCRIPT PURA (VANILLA JS)
+       ========================================================================== -->
+    <script>
+        // 1. Inicializar Ícones Lucide
+        lucide.createIcons();
+
+        // 2. Atualizar Ano no Copyright do Rodapé automaticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 3. Efeito de Scroll no Navbar (Muda de transparente/borrado para sólido)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 4. Controle do Menu Mobile (Hamburger)
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-link');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Altera o ícone de Menu para X
+            const icon = menuToggle.querySelector('svg');
+            if (navLinks.classList.contains('active')) {
+                menuToggle.innerHTML = '<i data-lucide="x" size="28"></i>';
+            } else {
+                menuToggle.innerHTML = '<i data-lucide="menu" size="28"></i>';
+            }
+            lucide.createIcons();
+        });
+
+        // Fechar o menu mobile ao clicar em algum link
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.innerHTML = '<i data-lucide="menu" size="28"></i>';
+                    lucide.createIcons();
+                }
+            });
+        });
+
+        // 5. Animações de Scroll Suave com Intersection Observer (Scroll Reveal)
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+    </script>
+</body>
+</html>
